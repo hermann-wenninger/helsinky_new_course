@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/a_work/helsinky_new_course/admin",
-      "program": "d:/a_work/helsinky_new_course/admin/build/Debug/outDebug",
+      "cwd": "d:/a_work/helsinky_new_course/part1",
+      "program": "d:/a_work/helsinky_new_course/part1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
