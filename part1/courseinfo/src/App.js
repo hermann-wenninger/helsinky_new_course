@@ -9,7 +9,7 @@ const Content = () => {
 }
 
 const Part = () => {
-  console.log()
+  console.log('part')
   return (
     <div>
       <p>
@@ -20,7 +20,7 @@ const Part = () => {
 }
 
 const Total = () => {
-  console.log()
+  console.log('total')
   return (
     <div>
       <p>
@@ -30,7 +30,7 @@ const Total = () => {
   )
 }
 const Header = () => {
-  console.log()
+  console.log('header')
   return (
     <div>
       <p>
