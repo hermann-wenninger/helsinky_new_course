@@ -6,7 +6,7 @@ participant user
 participant browser
 participant server
 
-user->>browser: inputs site address into browser and submits request
+user->>browser: put site address into adressfield from browser and find the way over dns tcp-ip
 browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
 activate server
 server-->>browser: HTML document
