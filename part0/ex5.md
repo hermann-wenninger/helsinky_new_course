@@ -1,4 +1,4 @@
-# display: The user-browser -server interaction of the SPA
+# display: The user-browser-server interaction of the SPA
 
 ```mermaid
 sequenceDiagram
