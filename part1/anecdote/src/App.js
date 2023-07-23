@@ -12,13 +12,13 @@ const App = () => {
   const age = 10
   let x = 999999
   return (
-    <div>
+    <>
       <h1>Greetings</h1>
       <Hello name="arni" agf="34567"/>
       <Hello name="hmann" agf={age}/>
       <Hello name="flix" agf={456 + 123}/>
       <Hello name="calaa" agf={x}/>
-    </div>
+    </>
   )
 }
 
