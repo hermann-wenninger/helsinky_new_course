@@ -1,4 +1,4 @@
-# Chart displaying the user navigating to the SPA ver of notes
+# display: The user-browser -server interaction of the SPA
 
 ```mermaid
 sequenceDiagram
@@ -14,19 +14,19 @@ deactivate server
 
 browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
 activate server
-server-->>browser: The css document
+server-->>browser: server send main.css the file for layout
 deactivate server
 
 browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
 activate server
-server-->>browser: The Javascript file
+server-->>browser: server send spa.js: the file for functions inthere the call data.json
 deactivate server
 
 browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
 activate server
-server-->>browser: [{content: "asd", date: "2023-05-17T18:23:44.366Z"}, {content: "sd", date: "2023-05-17T18:23:44.495Z"},…]
+server-->>browser: [{....},{....}, {content: "the content", date: "2023-07-23T01:14:49.986Z"}]
 deactivate server
 
-browser-->>user:webpage is displayed to user
+browser-->>user:spa.js and css.file is working to display the data.json content on browser-window
 
 ```
