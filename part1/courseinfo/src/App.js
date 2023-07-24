@@ -1,40 +1,40 @@
 const Header = (props) => {
   console.log('header',props)
   return (
-    <div>
+    <>
       <h1>{props.coux}</h1>
-    </div>
+    </>
   );
 };
 
 const Part = (props) => {
   console.log('part',props)
   return (
-    <div>
+    <>
      
        <h2> {props.part} {props.exercises}</h2>
      
-    </div>
+    </>
   )
 }
 
 const Content = (props) => {
   console.log('content',props)
   return (
-    <div>
+    <>
     <Part part={props.parts[0].name} exercises={props.parts[0].exercises}/>
     <Part part={props.parts[1].name} exercises={props.parts[1].exercises}/>
     <Part part={props.parts[2].name} exercises={props.parts[2].exercises}/>
-    </div>
+    </>
   );
 };
 
 const Total = (props) => {
   console.log('total',props)
   return (
-    <div>
+    <>
       <p>Number of exercises <strong>{props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises}</strong></p>
-    </div>
+    </>
   );
 };
 const App = () => {
