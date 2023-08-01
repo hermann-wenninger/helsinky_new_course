@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 const App = () => {
+  const [ counterx, setCounterx ] = useState(0)
   const [ counter, setCounter ] = useState(0)
   let [vari, funci] = useState(333333)
   let [lunki, flunki] = useState(333333)
@@ -11,7 +12,12 @@ const App = () => {
   setTimeout(()=>flunki(lunki + 1111),1);
 
   return (
-    <div>{counter} ##### {vari} ######{lunki}</div>
+  <div>{counter} ##### {vari} ######{lunki} ********{counterx}
+  
+  <button onClick={() => setCounterx(counterx + 1)}>
+  plus
+</button>
+  </div>
   )
 }
 
