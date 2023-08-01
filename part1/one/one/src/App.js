@@ -1,4 +1,10 @@
 import { useState } from 'react'
+const Display = (props) => {
+  return (
+    <div>haleluia{props.counter}</div>
+  )
+}
+
 
 const App = () => {
   const increaseByOne = () => setCounterx(counterx + 1)
@@ -21,6 +27,7 @@ const App = () => {
   <button onClick={() => setCounterx(counterx = 0)}> zero</button><br></br>
   <button onClick={increaseByOne}>plus</button>
   <button onClick={setToZero}> zero</button>
+  <Display counter={lunki} />
   </div>
   )
 }
