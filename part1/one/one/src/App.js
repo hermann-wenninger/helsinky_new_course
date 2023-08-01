@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
 
-function App() {
+const App = () => {
+  const [ counter, setCounter ] = useState(0)
+  let [vari, funci] = useState(333333)
+  let [lunki, flunki] = useState(333333)
+  //let funci = function (){return vari -1}
+  setTimeout(() => setCounter(counter + 1),500)
+  setTimeout(()=> funci(vari-1),10);
+  //const flunki = function(){return lunki + 1111};
+  setTimeout(()=>flunki(lunki + 1111),1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>{counter} ##### {vari} ######{lunki}</div>
+  )
 }
 
-export default App;
+export default App
+
