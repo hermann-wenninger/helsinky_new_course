@@ -1,7 +1,10 @@
 import { useState } from 'react'
 
 const App = () => {
-  const [ counterx, setCounterx ] = useState(0)
+  const increaseByOne = () => setCounterx(counterx + 1)
+  
+  const setToZero = () => setCounterx(0)
+  let [ counterx, setCounterx ] = useState(0)
   const [ counter, setCounter ] = useState(0)
   let [vari, funci] = useState(333333)
   let [lunki, flunki] = useState(333333)
@@ -14,9 +17,10 @@ const App = () => {
   return (
   <div>{counter} ##### {vari} ######{lunki} ********{counterx}
   
-  <button onClick={() => setCounterx(counterx + 1)}>
-  plus
-</button>
+  <button onClick={() => setCounterx(counterx + 1)}>plus</button>
+  <button onClick={() => setCounterx(counterx = 0)}> zero</button><br></br>
+  <button onClick={increaseByOne}>plus</button>
+  <button onClick={setToZero}> zero</button>
   </div>
   )
 }
