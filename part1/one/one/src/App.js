@@ -15,7 +15,7 @@ const Button = (props) => {
 
 const App = () => {
   const increaseByOne = () => setCounterx(counterx + 1)
-  const decreaseByOne = () => setCounterx(counter - 1)
+  const decreaseByOne = () => setCounterx(counterx - 1)
   const setToZero = () => setCounterx(0)
   let [ counterx, setCounterx ] = useState(0)
   const [ counter, setCounter ] = useState(0)
