@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 const Display = (props) => {
   return (
     <div>haleluia{props.counter}</div>
