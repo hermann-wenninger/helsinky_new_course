@@ -5,11 +5,17 @@ const Display = (props) => {
     <div>haleluia{props.counter}</div>
   )
 }
-
+const Button = (props) => {
+  return (
+    <button onClick={props.handleClick}>
+      {props.text}
+    </button>
+  )
+}
 
 const App = () => {
   const increaseByOne = () => setCounterx(counterx + 1)
-  
+  const decreaseByOne = () => setCounterx(counter - 1)
   const setToZero = () => setCounterx(0)
   let [ counterx, setCounterx ] = useState(0)
   const [ counter, setCounter ] = useState(0)
@@ -27,8 +33,11 @@ const App = () => {
   <button onClick={() => setCounterx(counterx + 1)}>plus</button>
   <button onClick={() => setCounterx(counterx = 0)}> zero</button><br></br>
   <button onClick={increaseByOne}>plus</button>
-  <button onClick={setToZero}> zero</button>
-  <Display counter={lunki} />
+  <button onClick={setToZero}> {counterx}</button>
+  <Display counter={counterx} />
+  <Button  handleClick={increaseByOne} text='plus' />
+  <Button  handleClick={setToZero} text='tozero' />
+  <Button  handleClick={decreaseByOne} text='minus one' />
   </div>
   )
 }
