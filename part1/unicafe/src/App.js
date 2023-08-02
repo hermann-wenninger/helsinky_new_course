@@ -3,6 +3,11 @@ import { useState } from 'react'
 const Button = (props) => {
   return <button onClick={props.handleClick}>{props.text}</button>;
 };
+const Statistics = (props) => {
+  if (props = undefined){
+    return 'keine Statistics';
+  }
+}
 
 const App = () => {
 
@@ -27,6 +32,7 @@ const App = () => {
      <p>all {good + neutral + bad}</p>
      <p>average {(good - bad)/(good + neutral + bad)}</p>
      <p>positive in percent: {good/((good + neutral + bad)/100)} %</p>
+     <Statistics props='' />
     </div>
   )
 }
