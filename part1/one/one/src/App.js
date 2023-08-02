@@ -13,6 +13,21 @@ const Button = (props) => {
   )
 }
 
+const History = (props) => {
+  if (props.allClicks.length === 0) {
+    return (
+      <div>
+        the app is used by pressing the buttons
+      </div>
+    )
+  }
+
+  return (
+    <div>
+      button press history: {props.allClicks.join(' ')}
+    </div>
+  )
+}
 const App = () => {
 
   const [total, setTotal] = useState(0)
@@ -103,6 +118,8 @@ const App = () => {
       {right}
       <p>{allClicksx.join(' ')}</p>
       <p>total {total} TOTAL</p>
+      <br></br>
+      <History allClicks={allClicksx} />
   </div>
   )
 }
