@@ -16,14 +16,16 @@ const App = () => {
 
   return (
     <div>
-    <p>give feedback</p>
+    <p><h1>give feedback</h1></p>
      <Button handleClick={increaseplus} text="plus" />
      <Button handleClick={increaseneutral} text="neutral" />
      <Button handleClick={increaseminus} text="minus" /><br></br>
-     <p>statistics</p>
+     <p><h2>statistics</h2></p>
      <p>good {good}</p>
      <p>neutral {neutral}</p>
      <p>bad {bad}</p>
+     <p>all {good + neutral + bad}</p>
+     <p>average {(good - bad)/(good + neutral + bad)}</p>
     </div>
   )
 }
