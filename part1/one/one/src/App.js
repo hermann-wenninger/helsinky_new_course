@@ -14,9 +14,30 @@ const Button = (props) => {
 }
 
 const App = () => {
+
+  const [total, setTotal] = useState(0)
+
   const [clicks, setClicks] = useState({
     left: 0, right: 0
   })
+
+
+  const [allClicksx, setAllx] = useState([])
+  const handleLeftClickx = () => {
+    setAllx(allClicksx.concat('L'))
+    setLeft(left + 1)
+    const updatedLeft = left + 1
+    setLeft(updatedLeft)
+    setTotal(updatedLeft + right) 
+  }
+
+  const handleRightClickx = () => {
+    setAllx(allClicksx.concat('R'))
+    setRight(right + 1)
+    const updatedLeft = left + 1
+    setLeft(updatedLeft)
+    setTotal(updatedLeft + right) 
+  }
 
   const handleLeftClick = () => {
     const newClicks = { 
@@ -75,8 +96,13 @@ const App = () => {
       <button onClick={handleLeftClick}>left</button>
       <button onClick={handleRightClick}>right</button>
       {clicks.right}
-
-
+<br></br>
+      {left}
+      <button onClick={handleLeftClickx}>left</button>
+      <button onClick={handleRightClickx}>right</button>
+      {right}
+      <p>{allClicksx.join(' ')}</p>
+      <p>total {total} TOTAL</p>
   </div>
   )
 }
