@@ -5,7 +5,9 @@ const Button = (props) => {
 
 const App = () => {
   function getRanInt(max) {
-    return Math.floor(Math.random() * max);
+    let xy = Math.floor(Math.random() * max);
+    console.log(xy);
+    return xy
   }
  
   const anecdotes = [
@@ -19,7 +21,7 @@ const App = () => {
     'The only way to go fast, is to go well.'
   ]
   let x = getRanInt(anecdotes.length);
-  
+
   const [selected, setSelected] = useState(0)
   const selectAnecdote = ()=> setSelected(x)
   return (
