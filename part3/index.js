@@ -29,6 +29,15 @@ app.get('/api/notes', (req, res) => {
   res.json(notes)
 })
 
+app.get('/api/notes/:id', (request, response) => {
+  const id = request.params.id
+  const note = notes.find(note => {
+    console.log(note.id, typeof note.id, id, typeof id, note.id === id)
+    return note.id === id
+  })
+  console.log(note)
+  response.json(note)
+})
 
 const PORT = 3001
 app.listen(PORT)
