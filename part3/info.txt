@@ -1,0 +1,2 @@
+node_modules/.bin/nodemon index.js   //dev server start
+npm run dev   //also dev server start
