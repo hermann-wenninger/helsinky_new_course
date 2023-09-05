@@ -6,8 +6,10 @@
   "scripts": {
     "start": "node index.js",
     "test": "test"
-    
   },
   "author": "hermann wenninger",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
