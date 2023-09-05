@@ -4,7 +4,9 @@
   "description": "a module for part3 of helsinki fullstack course 2023",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "test"
+    
   },
   "author": "hermann wenninger",
   "license": "ISC"
