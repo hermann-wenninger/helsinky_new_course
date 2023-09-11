@@ -30,8 +30,15 @@ app.get('/api/notes', (req, res) => {
 })
 
 app.post('/api/notes', (request, response) => {
+  const maxId = notes.length > 0
+    ? Math.max(...notes.map(n => n.id)) 
+    : 0
+
   const note = request.body
-  console.log(note)
+  note.id = maxId + 1
+
+  notes = notes.concat(note)
+  console.log(notes)
   response.json(note)
 })
 

@@ -1,2 +1,8 @@
 POST http://localhost:3001/api/notes/
+Content-Type: application/json
+
+{
+    "content": "fluguckluck GO Python JavaScript TypeScript Rust and C is easyohoooooooooooajja",
+    "important": false
+}
   
