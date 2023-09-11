@@ -1,20 +1,30 @@
 {
   "name": "part3",
   "version": "1.0.0",
-  "description": "a module for part3 of helsinki fullstack course 2023",
+  "description": "units 3.1.-3.6.",
   "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "test"
-    
   },
-  "author": "hermann wenninger",
+  "keywords": [
+    "units",
+    "3.1.-3.6.",
+    "express",
+    "npm",
+    "node",
+    "js"
+  ],
+  "author": "hermsnn wenninger",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
-  },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
