@@ -23,9 +23,9 @@ app.use(express.json())
 const phonelen = persons.length
 const date = new Date()
 app.get('/info', (req, res) => {
-  console.log('phonelen',phonelen)
-  res.send(`<p><h3>phonebock has info for ${phonelen} persons </h3></p><br>
-  <p><h4>${date}</h4></p>`)
+console.log('phonelen',phonelen)
+res.send(`<p><h3>phonebock has info for ${phonelen} persons </h3></p><br>
+<p><h4>${date}</h4></p>`)
 })
 
 app.get('/api/persons', (req, res) => {
