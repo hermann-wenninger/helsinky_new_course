@@ -19,7 +19,7 @@ let notes = [
   }
 ]
 
-
+app.use(express.json())
 
 app.get('/', (req, res) => {
   res.send('<h1>Hello World!</h1>')
@@ -27,6 +27,12 @@ app.get('/', (req, res) => {
 
 app.get('/api/notes', (req, res) => {
   res.json(notes)
+})
+
+app.post('/api/notes', (request, response) => {
+  const note = request.body
+  console.log(note)
+  response.json(note)
 })
 
 app.get('/api/notes/:id', (request, response) => {
