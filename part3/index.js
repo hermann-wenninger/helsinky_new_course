@@ -1,4 +1,5 @@
 const express = require('express')
+
 const app = express()
 
 let persons = [
@@ -25,14 +26,23 @@ const date = new Date()
 app.get('/info', (req, res) => {
 console.log('phonelen',phonelen)
 res.send(`<p><h3>phonebock has info for ${phonelen} persons </h3></p><br>
-<p><h4>${date}</h4></p>`)
+  <p><h4>${date}</h4></p>`)
 })
 
 app.get('/api/persons', (req, res) => {
   res.json(persons)
 })
 
-
+app.get('/api/persons/:id',(req,res)=>{
+  const id = Number(req.params.id)
+  const person = persons.find(p => p.id === id)
+  
+  if (person) {
+    res.json(person)
+  } else {
+    res.status(404).end()
+  }
+})
 
 const generateId = () => {
   const maxId = persons.length > 0
