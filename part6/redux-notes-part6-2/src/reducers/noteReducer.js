@@ -1,7 +1,7 @@
 const initialState = [
   {
     content: 'reducer defines how redux store works',
-    important: true,
+    important: false,
     id: 1,
   },
   {
@@ -30,7 +30,7 @@ const noteReducer = (state = initialState, action) => {
     }
   } 
 
-const generateId = () =>
+const generateIdio = () =>
   Number((Math.random() * 1000000).toFixed(0))
 
 export const createNote = (content) => {
@@ -39,7 +39,7 @@ export const createNote = (content) => {
     payload: {
       content,
       important: false,
-      id: generateId()
+      id: generateIdio()
     }
   }
 }
