@@ -1,5 +1,8 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css';
+
 const App = () => {
- 
   const course = 'Half Stack application development'
   const part1 = {
     name: 'Fundamentals of React',
@@ -13,47 +16,43 @@ const App = () => {
     name: 'State of a component',
     exercises: 14
   }
+
   return (
     <div>
-      <Header course={course}/>
-  <Content part1={part1} 
-          part2={part2}   
-          part3={part3} 
-  />
-
-  <Total ex1={part1.exercises} ex2={part2.exercises} ex3={part3.exercises}/>
- </div>
- )
+      <Header course={course} />
+      <Content part1={part1} part2={part2} part3={part3} />
+      <Total part1={part1} part2={part2} part3={part3} />
+    </div>
+  )
 }
-
 export default App
 
 
-const Header = (props)=>{
- 
-return(
-   <h1>{props.course}</h1>
-   )}
 
-const Content = (props)=>{
-  
-  return(
-    <ul>
-      <Part part={props.part1.name} exercises={props.part1.exercises}/>
-      <Part part={props.part2.name} exercises={props.part2.exercises}/>
-      <Part part={props.part3.name} exercises={props.part3.exercises}/>
-    </ul>
-  )}
+const Header = ({ course }) => (
+  <h1 className='root'>{course}</h1>
+)
 
-const Total =(props)=>{
-  return(
-    <p>All Exes: {props.ex1 + props.ex2 + props.ex3}</p>
-  )
-}
+const Part = ({ part, exercises }) => (
+  <p>{part} {exercises}</p>
+)
 
-const Part =(props)=>{
-  console.log('part',props)
-  return(
-    <li><strong>Part:</strong> {props.part} <strong>Exercises:</strong>{props.exercises}</li>
-  )
-}
+const Content = ({ part1, part2, part3 }) => (
+  <div className='root'>
+    <Part part={part1.name} exercises={part1.exercises} />
+
+    <Part part={part2.name} exercises={part2.exercises} />
+
+    <Part part={part3.name} exercises={part3.exercises} />
+  </div>
+)
+
+const Total = ({ part1, part2, part3 }) => (
+  <p className='root'>
+    <strong>Exerices:</strong> {part1.exercises + part2.exercises + part3.exercises}
+  </p>
+)
+
+
+
+
