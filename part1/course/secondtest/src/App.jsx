@@ -4,23 +4,25 @@ import './index.css';
 
 const App = () => {
   const course = 'Half Stack application development'
-  const part1 = {
-    name: 'Fundamentals of React',
-    exercises: 10
-  }
-  const part2 = {
-    name: 'Using props to pass data',
-    exercises: 7
-  }
-  const part3 = {
-    name: 'State of a component',
-    exercises: 14
-  }
-
+  const parts = [
+    {
+      name: 'Fundamentals of React',
+      exercises: 10
+    },
+    {
+      name: 'Using props to pass data',
+      exercises: 7
+    },
+    {
+      name: 'State of a component',
+      exercises: 14
+    }
+  ]
+console.log('parts[0]',parts[0])
   return (
     <div>
       <Header course={course} />
-      <Content part1={part1} part2={part2} part3={part3} />
+      <Content parts={parts} />
       <Total part1={part1} part2={part2} part3={part3} />
     </div>
   )
@@ -33,8 +35,8 @@ const Header = ({ course }) => (
   <h1 className='root'>{course}</h1>
 )
 
-const Part = ({ part, exercises }) => (
-  <p>{part} {exercises}</p>
+const Part = ({ part }) => (
+  <p><strong>Parts:</strong>{part.name} <strong>exercises:</strong>{part.exercises}</p>
 )
 
 const Content = ({ part1, part2, part3 }) => (
